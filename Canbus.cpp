@@ -3,7 +3,15 @@
  *
  * Copyright (c) 2008-2009  All rights reserved.
  */
-#include "WConstants.h"
+
+#if ARDUINO>=100
+#include <Arduino.h> // Arduino 1.0
+#else
+#include <Wprogram.h> // Arduino 0022
+#endif
+#include <stdint.h>
+#include <avr/pgmspace.h>
+
 #include <stdio.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
